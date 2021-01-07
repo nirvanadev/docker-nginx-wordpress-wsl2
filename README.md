@@ -10,7 +10,8 @@
 2. Run this `git clone https://github.com/nirvanadev/docker-nginx-wordpress-wsl2.git`
 3. Then this `cd docker-nginx-wordpress-wsl2 && touch .env`
 4. Now, open the .env file and add the following. Replace the values after the `=` with your own.
-    ```MYSQL_ROOT_PASSWORD=your_root_password
+    ```
+    MYSQL_ROOT_PASSWORD=your_root_password
     MYSQL_USER=user_name
     MYSQL_PASSWORD=user_password
     ```

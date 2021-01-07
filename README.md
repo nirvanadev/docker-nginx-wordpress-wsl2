@@ -12,7 +12,8 @@
 4. Now, open the .env file and add the following:
     ```MYSQL_ROOT_PASSWORD=your_root_password
     MYSQL_USER=user_name
-    MYSQL_PASSWORD=user_password```
+    MYSQL_PASSWORD=user_password
+    ```
     Replace the values after the `=` with some custom ones
 5. Copy your self-signed .crt and .key files to `certs/`
 5. Finally, launch the container with `docker-compose up -d`

@@ -1,4 +1,5 @@
 .env
-*.crt
-*.key
+certs/**
+!certs/.keep
 wp-content/**
+!wp-content/.keep

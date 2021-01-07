@@ -3,7 +3,7 @@
 ## Prerequisites
 1. Working WSL 2 Ubuntu
 2. Docker WSL 2
-3. Self-signed SSL certificates for localhost
+3. Self-signed SSL certificate and key for localhost
 
 ## Install
 1. Open a terminal using your WSL 2 Ubuntu distro and navigate to somewhere like ~/home/sites (make the directory if not present)

@@ -23,7 +23,8 @@ services:
     container_name: wordpress
     restart: unless-stopped
     env_file: .env
-    user: "1000:1000"
+    # Uncomment the line below after you `chown -R 1000:1000 /usr/var/www/html` from within this container.
+    # user: "1000:1000"
     environment:
       - WORDPRESS_DB_HOST=db:3306
       - WORDPRESS_DB_USER=$MYSQL_USER
@@ -32,6 +33,16 @@ services:
     volumes:
       - wordpress:/var/www/html
       - ./wp-content:/var/www/html/wp-content
+    networks:
+      - app-network
+
+  cli:
+    image: wordpress:cli-php7.4
+    volumes: 
+      - wordpress:/var/www/html
+    depends_on:
+      - db
+      - wordpress
     networks:
       - app-network
 

@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
     env_file: .env
     # Uncomment the line below after you `chown -R 1000:1000 /usr/var/www/html` from within this container.
-    # user: "1000:1000"
+    user: "1000:1000"
     environment:
       - WORDPRESS_DB_HOST=db:3306
       - WORDPRESS_DB_USER=$MYSQL_USER
@@ -73,7 +73,7 @@ services:
       - wordpress:/var/www/html 
       - ./wp-content:/var/www/html/wp-content
       - ./nginx-conf:/etc/nginx/conf.d
-      - ./certs:/certs
+      - /home/k33f/keys:/keys
     networks:
       - app-network
 
